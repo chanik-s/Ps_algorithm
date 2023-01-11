@@ -12,8 +12,8 @@ int main()
 		string input;
 		string answer;
 		
-		cin >> input; //"2222 02 28" ÀÎµ¦½Ì ÇÊ¿ä
-		//ÀÎµ¦½Ì Àß¸øµÊsubstrº¸±â
+		cin >> input; //"2222 02 28" ì¸ë±ì‹± í•„ìš”
+		//substrë³´ê¸°
 		string year=input.substr(0,4); //2022
 		string month=input.substr(4,2); //02
 		string day=input.substr(6,2); //28
@@ -38,7 +38,7 @@ int main()
 			}
 		}
 		else
-			answer = "-1";
+			answer = "-1"; //" "ìœ¼ë¡œ í‘œí˜„í•´ì¤˜ì•¼í•¨ ' 'ì€ ì˜¤ë¥˜..?
 
 		cout << "#" << t << " " << answer << '\n';
 	}
