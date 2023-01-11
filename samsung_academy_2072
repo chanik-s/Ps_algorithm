@@ -1,0 +1,31 @@
+//홀수만 더하기
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+	int T;
+	cin >> T;
+	
+
+	for (int testcase = 1; testcase <= T;++testcase) {
+		int a[10];
+		for (int i = 0; i < 10; i++)
+		{
+			cin >> a[i];
+		}
+
+		int answer=0;
+
+		for (int i = 0; i <10 ; i++)
+		{
+			if (a[i] % 2 == 0) continue;
+
+			answer += a[i];
+		}
+
+		cout << "#" << testcase << " " << answer << "\n";
+	}
+	return 0;
+}
