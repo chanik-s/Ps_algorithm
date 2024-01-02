@@ -4,9 +4,7 @@
 #include <algorithm>
 
 using namespace std;
-bool cmp(char v1,char v2) {
-	
-}
+
 int main() {
 
 	ios::sync_with_stdio(0);
@@ -14,28 +12,27 @@ int main() {
 
 	int n;
 	cin >> n;
+
+	vector<long long> v1;
+
+	//각 원소 뒤집기
+	for (int i = 0; i < n; i++) {
+
+		string s;
+		cin >> s; //"2233"
+		reverse(s.begin(),s.end());	//역순
+		// algorithm 헤더 reverse() 존재-->"3322"
+		v1.push_back( stoll(s));
+	}
+
+	//문자열 비교시 맨 앞 기준으로 비교  예를 들어 "123" < "5" 가 됨
 	
-	vector<string> v1;
 	
-	while (n--) {
-		string k;
-		cin >> k;
-		v1.push_back(k);
+	//원소 오름차순 정렬 
+	sort(v1.begin(), v1.end()); 
+
+	for (auto s : v1) {
+		cout << s << '\n';
 	}
-
-	for (int i = 0; i < v1.size(); i++) {
-
-		//sort(v1[i].begin(), v1[i].end(),cmp );
-		string tmp = "";
-		for (string::reverse_iterator it = v1[i].rbegin(); it != v1[i].rend();it++) {
-			tmp[i]=
-		}
-	}
-
-
-	for (auto i : v1) {
-		cout << i << ' ';
-	}
-
 	return 0;
 }
